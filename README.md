@@ -30,6 +30,8 @@ docker build -t mingrammer/flog .
 docker-compose up
 ```
 
+Open Grafana at <http://localhost:3000>
+
 ## Destroy
 
 ```sh
