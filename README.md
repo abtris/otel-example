@@ -8,8 +8,30 @@
 
 ## Run
 
-```
-docker-compose up -d
+## Prerequistities
+
+- [m1 macs] make own version of 2 docker-images not compatible with ARM
+
+```sh
+git clone git@github.com:grafana/xk6-client-tracing.git
+cd xk6-client-tracing
+make docker
 ```
 
--> Grafana -> Tempo -> Search
+```sh
+git clone git@github.com:mingrammer/flog.git
+cd flog
+docker build -t mingrammer/flog .
+```
+
+## Use
+
+```sh
+docker-compose up
+```
+
+## Destroy
+
+```sh
+docker-compose down
+```
