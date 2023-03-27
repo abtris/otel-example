@@ -6,6 +6,22 @@
 
 - <https://grafana.com/docs/tempo/latest/getting-started/example-demo-app/>
 
+This example contains this images:
+
+- Generate traffic
+`ghcr.io/grafana/xk6-client-tracing` - generate traces
+`mingrammer/flog` - generate logs
+
+- Observability tooling
+`grafana/promtail` - promtail for forward logs into Loki
+`prom/prometheus` - prometheus for collect metrics, Grafana will use for metrics
+`otel/opentelemetry-collector` - forward traces into Tempo
+
+- Grafana stack
+`grafana/tempo` - traces
+`grafana/loki` - logs
+`grafana/grafana` - Grafana for display dashboard and search in traces and logs
+
 ## Run
 
 ## Prerequistities
