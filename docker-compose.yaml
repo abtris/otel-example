@@ -18,7 +18,7 @@ services:
 
   # And put them in an OTEL collector pipeline...
   otel-collector:
-    image: otel/opentelemetry-collector:0.74.0
+    image: otel/opentelemetry-collector:latest
     command: [ "--config=/etc/otel-collector.yaml" ]
     networks:
       - loki
@@ -75,7 +75,7 @@ services:
       retries: 5
 
   promtail:
-    image: grafana/promtail:2.7.4
+    image: grafana/promtail:latest
     volumes:
       - ./promtail-local-config.yaml:/etc/promtail/config.yaml:ro
       - /var/run/docker.sock:/var/run/docker.sock
@@ -83,7 +83,7 @@ services:
     networks:
       - loki
   loki:
-    image: grafana/loki:2.7.4
+    image: grafana/loki:latest
     ports:
       - "3100:3100"
     command: -config.file=/etc/loki/local-config.yaml
