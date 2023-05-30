@@ -26,6 +26,17 @@ This example contains this images:
   - `grafana/loki` - logs
   - `grafana/grafana` - Grafana for display dashboard and search in traces and logs
 
+```mermaid
+flowchart TD
+    xk6-client-tracing --> otel-collector
+    flog --> promtail
+    otel-collector --> tempo
+    loki -- logs --> grafana
+    prometheus -- metrics --> grafana
+    tempo -- traces --> grafana
+    promtail --> loki
+```
+
 ## Run
 
 ## Prerequistities
