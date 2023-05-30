@@ -35,6 +35,7 @@ flowchart TD
     prometheus -- metrics --> grafana
     tempo -- traces --> grafana
     promtail --> loki
+    tempo -- metrics from traces --> prometheus
 ```
 
 ## Run
